@@ -1,64 +1,150 @@
 <!DOCTYPE html>
+
+<!-- 
+! PLEASE READ THIS
+! VERY IMPORTANT 
+
+Please only open with a Chromium or Mozilla based browser.
+Webkit based Browser is not fully supported and does not work properly with the design.
+
+* Tested on:
+* - Firefox (works)
+* - Chrome (works)
+* - Brave (works)
+* - Safari (About Section Design is broken)
+-->
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
     <link rel="stylesheet" href="/src/style.css">
     <title>WMC-Website</title>
 </head>
 <body>
     <div class="shopping-cart-div">
         <img src="/images/cart-shopping-solid.svg" alt="Shopping Cart" id="shopping-cart">
-        <span class="purchase">Purchase</span>
+        <a href="./purchase.html" class="purchase">Purchase</a>
     </div>
 
     <section id="landing-page">
         <nav id="navbar" class="">
-            <img id="navbar-image" src="/images/AquaHowl-Logo.png" alt="AquaHowl-Logo" href="/index.html">
+            <a href="./index.html">
+                <img id="navbar-image" src="/images/AquaHowl-Logo.png" alt="AquaHowl-Logo">
+            </a>
             
             <ul id="navbar-ul">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a class="navbar-home" href="#landing-page">Home</a></li>
+                <li><a class="navbar-about" href="#about">About</a></li>
+                <li><a class="navbar-contact" href="#contact">Contact</a></li>
             </ul>
         </nav>
 
         <div class="notch">
             <nav id="navbar-notch" class="hide">
-                <img src="/images/Wolf-finished.svg" alt="AquaHowl-Logo" id="notch-image" href="/index.html">
+                <img src="/images/Wolf-finished.svg" alt="AquaHowl-Logo" id="notch-image">
     
                 <ul id="notch-ul">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a class="notch-home" href="#landing-page">Home</a></li>
+                    <li><a class="notch-about" href="#about">About</a></li>
+                    <li><a class="notch-contact" href="#contact">Contact</a></li>
                 </ul>
             </nav>
         </div>
 
 
-        <div class="landing-page-div">
-            <div class="paragraphs-landing-page">
-                <div class="bigger-text-landing-section">
+        <div class="hero-div">
+            <div class="hero-paragraphs">
+                <div class="hero-big">
                     <p>New Level <br> of Sound <br> Experience.</p>
                 </div>
-                <div class="smaller-text-landing-section">
+                <div class="hero-small">
                     <p>
-                        Lorem Ipsum is simply dummy text <br> of the printing and typesetting <br>  industry.
+                        Discover exceptional sound quality <br> with our audio tapes.
                     </p>
                 </div>
             </div>
     
-            <div class="audio-tape-div">
-                <img src="/images/Audio-Tape.png" alt="Audio Tape" id="audio-tape">
+            <div class="hero-img">
+                <img src="/images/audio-tape-3.png" alt="Audio Tape" id="audio-tape">
             </div>
         </div>
 
     </section>
     <section id="about">
-
+        <div class="about-h1">
+            <p>TapeFusion</p>
+        </div>
+        <div class="about-h2">
+            <p>This is just some sample text.</p>
+        </div>
+        <div class="about-p">
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,<br>
+                sed diam nonumy eirmod tempor invidunt ut labore et<br>
+                dolore magna aliquyam erat, sed diam voluptua. At vero<br>
+                eos et accusam et justo duo dolores et ea rebum. Stet clita<br> 
+                kasd gubergren, no sea takimata sanctus est Lorem ipsum<br>
+                dolor sit amet. Lorem ipsum dolor sit amet, consetetur.</p>
+        </div>
     </section>
+
+    <section id="contact">
+        <div class="contact-h1">
+            <p>Contact
+            </p>
+        </div>
+
+        <div class="contact-div">
+            <div class="contact-section-1">
+                <div class="contact-section-1-header">Newsletter</div>
+                <div class="contact-section-1-paragraph">If you want to always get our daily News, <br> make sure to subscribe to our Newsletter! :)</div>
+                <div class="contact-section-1-newsletter">
+                    <div class="contact-section-1-newsletter-email">
+                        <input type="email" placeholder="example@aquahowl.com">
+                    </div>
+                    <div class="contact-section-1-newsletter-button">
+                        <i class="fas fa-bell"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-section-2">
+                <div class="contact-section-2-header">Help Center</div>
+                <div class="contact-section-2-paragraph">If you have any questions, <br> feel free to contact us!</div>
+                <div class="contact-section-2-contact">
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:help@aquahowl.com">help@aquahowl.com</a>
+                </div>
+            </div>
+            <div class="contact-section-3">
+                <div class="contact-section-2-header">Leave a Message</div>
+                <div class="contact-section-2-paragraph">If you have anything to tell us, <br> feel free here to do so! :)</div>
+                <div class="contact-form">
+                    <input type="text" placeholder="Name" id="first-text">
+                    <input type="email" placeholder="Email">
+                    <textarea placeholder="Message:"></textarea>
+                    <button type="submit">Send the Message off to us :) </button>
+                </div>
+            </div>
+        </div>
+        
+    </section>
+
+    <div class="footer">
+        <div class="footer-section-1">
+            <a href="./privacy-policy.html">Privacy Policy</a>
+        </div>
+        <div class="footer-section-2">
+            <p>&copy; 2023 AquaHowl</p>
+            <p><br>All rights reserved.</p>
+        </div>
+        <div class="footer-section-3">
+            <a href="./imprint.html">Imprint</a>
+        </div>
+    </div>
+
     <script src="/src/script.js"></script>
 </body>
 </html>

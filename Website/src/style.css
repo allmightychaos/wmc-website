@@ -78,6 +78,9 @@ body {
 
     margin-left: 20px;
     opacity: 0.5;
+
+    text-decoration: none;
+    color: white;
 }
 
 .shopping-cart-div:hover .purchase {
@@ -92,13 +95,8 @@ body {
 
 #landing-page {
     width: 100%;
-    height: 150vh;
+    height: 120vh;
 
-    /* background: linear-gradient(
-        to right bottom, 
-        #24ae5e,  #135c32 */ /*
-        #1db7b1 /* #10625f 
-    ); */
     background: rgb(18, 19, 22);
 }
 
@@ -246,52 +244,48 @@ to {
 
 /* 
 <=================================================================================>
------------------------------------- Pargraphs ------------------------------------
+------------------------------------ Hero Section ------------------------------------
 <=================================================================================>
 */
 
-.paragraphs-landing-page {
+.hero-div {
+    display: flex;
+}
+
+.hero-paragraphs {
     display: block;
 }
 
-.bigger-text-landing-section {
+.hero-big {
     font-family: 'Montserrat', sans-serif;
     font-size: 80px;
     font-weight: 700;
-    color: rgba(255, 255, 255, 0.8);
     line-height: 70px;
     letter-spacing: 0.13px;
 
+    /* color: rgba(255, 255, 255, 0.8); */
+    color: rgba(102, 178, 178, .8);
     text-transform: uppercase;
     margin: 150px 0 0 130px;
 }
 
-.smaller-text-landing-section {
-    color: rgba(255, 255, 255, 0.4);
+.hero-small {
+    /* color: rgba(255, 255, 255, 0.4); */
+    color: rgba(102, 178, 178, .4);
     font-family: 'Montserrat', sans-serif;
     font-size: 30px;
     font-weight: 500;
-    color: rgba(255, 255, 255, 0.8);
+    
     letter-spacing: 0.13px;
 
     margin: 25px 0 0 130px;
 }
 
-/*
-<=================================================================================>
------------------------------------- Audio Tape -----------------------------------
-<=================================================================================>
-*/
-
-.landing-page-div {
-    display: flex;
-}
-
-.audio-tape-div {
-    background:rgb(24, 26, 29);;
+.hero-img {
+    background:rgb(24, 26, 29);
     border-radius: 20px;
-    width: 550px;
-    height: 380px;
+    width: 500px;
+    height: 437.5px;
 
     display: flex;
     justify-content: center;
@@ -299,9 +293,13 @@ to {
 
     margin: 150px 0 0 130px;
 
-    box-shadow: 0 0 15px #fff;
+    box-shadow: 0 0 15px rgb(102, 178, 178);
 }
 
+.hero-img img {
+    width: 416.67px;
+    height: 364.583px;
+}
 /* 
 <=================================================================================>
 ------------------------------------ About Section --------------------------------
@@ -310,6 +308,321 @@ to {
 
 #about {
     width: 100%;
-    height: 100vh;
-    background-color: #f5f5f5;
+    height: 125vh;
+    background-image: url("../images/about-section.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.about-h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 70px;
+    color: #93ccd1;
+
+    padding-top: 300px;
+    padding-left: 105px;
+}
+
+.about-h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 25px;
+    color: #528685;
+
+    padding-top: 50px;
+    padding-left: 105px;
+}
+
+.about-p {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+    color: rgb(70, 70, 70);
+
+    padding-top: 15px;
+    padding-left: 105px;
+}
+
+/* 
+<=================================================================================>
+------------------------------------ Contact Section ------------------------------
+<=================================================================================>
+*/
+
+#contact {
+    width: 100%;
+    height: 105vh;
+
+    background: linear-gradient(
+        180deg,
+        rgb(23, 12, 17) 10%,
+        rgb(0, 24, 24)
+    );
+}
+
+.contact-div {
+    display: flex;
+    align-items: center;
+
+    margin-top: 50px;
+    width: 100%;
+    height: 30vh;
+}
+
+.contact-section-1, .contact-section-2, .contact-section-3 {
+    display: flex;
+    flex-direction: column;
+    
+    width: 33%;
+    height: 100%;
+
+    margin-left: 100px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.contact-section-1-header, .contact-section-2-header, .contact-section-3-header {
+    font-weight: 700;
+    font-size: 30px;
+    color: #93ccd1;
+}
+
+.contact-section-1-paragraph, .contact-section-2-paragraph, .contact-section-3-paragraph {
+    font-weight: 500;
+    font-size: 15px;
+    color: #528685;
+}
+
+.contact-section-1-newsletter {
+    display: flex;
+    align-items: center;
+    color: white;
+    background: rgba(0, 128, 128);
+    border-radius: 10px;
+    margin-top: 50px;
+
+    width: 240px;
+    transition: 0.2s ease-in-out
+}
+
+.contact-section-1-newsletter:hover {
+    transform: scale(1.1);
+    transition: 0.2s ease-in-out
+}
+
+.contact-section-1-newsletter-email input {
+    background: rgba(0, 128, 128);
+    border: none;
+    outline: none;
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+}
+
+.contact-section-1-newsletter-button {
+    margin-right: 10px;
+    width: 25px;
+    height: 25px;
+    border-radius: 12px;
+
+    background-color: rgba(102, 178, 178, 0.8);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: 0.1s ease-in-out;
+    opacity: 0.8;
+}
+
+.contact-section-1-newsletter-button:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+    transition: 0.1s ease-in-out;
+    opacity: 1;
+}
+
+.contact-section-2-contact {
+    display: flex;
+    align-items: center;
+    color: white;
+    background: rgba(0, 128, 128);
+    border-radius: 10px;
+    margin-top: 50px;
+    opacity: 0.8;
+
+    width: 240px;
+    height: 36px;
+    transition: 0.2s ease-in-out
+}
+
+.contact-section-2-contact:hover {
+    cursor: pointer;
+    opacity: 1;
+    transition: 0.2s ease-in-out
+}
+
+.contact-section-2-contact i {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.contact-section-2-contact a {
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    color: white;
+    opacity: 0.8;
+}
+
+.contact-section-2-contact a:hover {
+    opacity: 1;
+}
+
+.contact-h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 70px;
+    color: #93ccd1;
+
+    padding-top: 150px;
+    padding-left: 105px;
+}
+
+.contact-form {
+    margin-top: 50px;
+}
+
+.contact-form input {
+    width: 180px;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+    padding-left: 10px;
+
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+
+    outline: none;
+    background: rgba(0, 128, 128, 1);
+    opacity: 0.6;
+
+    color: white;
+}
+
+.contact-form input:focus {
+    opacity: 1;
+}
+
+.contact-form textarea {
+    width: 365px;
+    height: 100px;
+    border-radius: 10px;
+    border: none;
+    margin-top: 10px;
+    padding-left: 10px;
+    padding-top: 10px;
+
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+
+    resize: none;
+    outline: none;
+    color: white;
+
+    overflow: hidden;
+    background: rgba(0, 128, 128, 1);
+    opacity: 0.6;
+}
+
+.contact-form textarea:focus {
+    opacity: 1;
+}
+
+.contact-form button {
+    width: 370px;
+    height: 40px;
+    border-radius: 25px;
+    border: none;
+    margin-top: 10px;
+    background-color: #528685;
+    
+    color: rgb(230, 230, 230);
+    opacity: 0.6;
+    transition: 0.1s ease-in-out;
+}
+
+.contact-form button:hover {
+    cursor: pointer;
+    background-color: #54aeb6;
+    color: rgb(255, 255, 255);
+    opacity: 1;
+    transition: 0.1s ease-in-out;
+}
+
+.contact-form button:active {
+    opacity: 0.8;
+    cursor: grabbing;
+    transform: scale(0.95);
+    transition: 0.1s ease-in-out;
+}
+
+/* 
+<=================================================================================>
+------------------------------------ Footer Section ------------------------------
+<=================================================================================>
+*/
+
+.footer {
+    width: 100%;
+    height: 100px;
+    background-color: #528685;
+
+    display: flex;
+    align-items: center;
+}
+
+.footer-section-1, .footer-section-2, .footer-section-3 {
+    height: 100%;
+    width: 33%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    color: white;
+}
+
+.footer-section-1 a {
+    text-decoration: none;
+    color: white;
+    opacity: 0.8;
+}
+
+.footer-section-1 a:hover {
+    opacity: 1;
+}
+
+
+.footer-section-2 {
+    flex-direction: column;
+}
+
+.footer-section-2 p:nth-child(2) {
+    font-size: 12px;
+    height: 0px;
+}
+
+.footer-section-3 a {
+    text-decoration: none;
+    color: white;
+    opacity: 0.8;
+}
+
+.footer-section-3 a:hover {
+    opacity: 1;
 }

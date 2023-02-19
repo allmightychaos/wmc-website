@@ -12,8 +12,6 @@ shoppingCartDiv.addEventListener('mouseout', function() {
 window.addEventListener("scroll", function() {
     const navbar = document.querySelector("#navbar");
     const notchbar = document.querySelector("#navbar-notch");
-
-    console.log(this.scrollY);
   
     if (window.scrollY > 100) {
       navbar.classList.remove("fade-in");
@@ -48,4 +46,58 @@ window.onscroll = function() {
   else if (shoppingCartDivTop > 150) {
     shoppingCartDiv.style.top = '150px';
   }
+};
+
+window.onload = function() {
+  const aboutNavbarButton = document.querySelector('.navbar-about');
+  const contactNavbarButton = document.querySelector('.navbar-contact');
+
+  const homeNotchButton = document.querySelector('.notch-home');
+  const aboutNotchButton = document.querySelector('.notch-about');
+  const contactNotchButton = document.querySelector('.notch-contact');
+
+  const homeSection = document.querySelector('#landing-page');
+  const aboutSection = document.querySelector('#about');
+  const contactSection = document.querySelector('#contact');
+
+  aboutNavbarButton.addEventListener('click', (event) => {
+    event.preventDefault();
+    window.scrollTo({
+      top: aboutSection.offsetTop,
+      behavior: 'smooth'
+    });
+  });
+
+  contactNavbarButton.addEventListener('click', (event) => {
+    event.preventDefault();
+
+    window.scrollTo({
+      top: contactSection.offsetTop,
+      behavior: 'smooth'
+    });
+  });
+
+  homeNotchButton.addEventListener('click', (event) => {
+    event.preventDefault();
+    window.scrollTo({
+      top: homeSection.offsetTop,
+      behavior: 'smooth'
+    });
+  });
+
+  aboutNotchButton.addEventListener('click', (event) => {
+    event.preventDefault();
+    window.scrollTo({
+      top: aboutSection.offsetTop,
+      behavior: 'smooth'
+    });
+  });
+
+  contactNotchButton.addEventListener('click', (event) => {
+    event.preventDefault();
+    window.scrollTo({
+      top: contactSection.offsetTop,
+      behavior: 'smooth'
+    });
+  });
 };
